@@ -1,0 +1,91 @@
+<div class="container mt-5">
+    <!-- Campo de texto y título de filtro -->
+    <div class="form-group">
+      <label for="filtro">Filtrar por:</label>
+      <input type="text" class="form-control" id="filtro" placeholder="Ingrese término de búsqueda">
+    </div>
+    
+    <!-- Botones Nuevo Vehículo y Mostrar Imagen -->
+    <div class="mb-3">
+      <button type="button" class="btn btn-primary mr-2" data-toggle="modal" data-target="#crearVehiculoModal">Nuevo Vehículo</button>
+      <button type="button" class="btn btn-secondary">Mostrar Imagen</button>
+    </div>
+    
+    <!-- Tabla de datos -->
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Código</th>
+          <th>Marca</th>
+          <th>Modelo</th>
+          <th>Año</th>
+          <th>Calificación</th>
+          <th>Operaciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Ejemplo de fila de datos (puedes repetir esto para agregar más filas) -->
+        <tr>
+          <td>001</td>
+          <td>Ford</td>
+          <td>Mustang</td>
+          <td>2022</td>
+          <td>5</td>
+          <td>
+            <!-- Botones Editar y Eliminar -->
+            <button class="btn btn-primary btn-sm mr-2">Editar</button>
+            <button class="btn btn-danger btn-sm">Eliminar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  <!-- Modal para la creación de vehículo -->
+  <div class="modal fade" id="crearVehiculoModal" tabindex="-1" role="dialog" aria-labelledby="crearVehiculoModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <!-- Encabezado del modal -->
+        <div class="modal-header">
+          <h5 class="modal-title" id="crearVehiculoModalLabel">Creación de Vehículo</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        
+        <!-- Cuerpo del modal (formulario) -->
+        <div class="modal-body">
+          <!-- Formulario para la creación de vehículo -->
+          <form>
+            <div class="form-group">
+              <label for="codigo">Código:</label>
+              <input type="text" class="form-control" id="codigo" placeholder="Ingrese el código">
+            </div>
+            <div class="form-group">
+              <label for="marca">Marca:</label>
+              <input type="text" class="form-control" id="marca" placeholder="Ingrese la marca">
+            </div>
+            <div class="form-group">
+              <label for="modelo">Modelo:</label>
+              <input type="text" class="form-control" id="modelo" placeholder="Ingrese el modelo">
+            </div>
+            <div class="form-group">
+              <label for="ano">Año:</label>
+              <input type="number" class="form-control" id="ano" placeholder="Ingrese el año">
+            </div>
+            <div class="form-group">
+              <label for="calificacion">Calificación:</label>
+              <input type="number" class="form-control" id="calificacion" placeholder="Ingrese la calificación">
+            </div>
+          </form>
+        </div>
+        
+        <!-- Pie del modal (botones de acción) -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-primary">Guardar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
